@@ -5,22 +5,27 @@
 
 
 /**
+ * Return math function
  *
  * @param arg
- * @param a
- * @param b
- * @return {*}
+ * @param a {number}
+ * @param b {number}
+ * @return {number}
  */
 function doSmth(arg, a, b){
-  switch (arg) {
-    case getSum(): return getSum();
-    case getMult(): return getMult();
-    case getDiv(): return getDiv();
-    default: console.log('arg is not a function');
+  if (typeof arg === 'string' || typeof(a) === 'number' || typeof(b) === 'number') {
+      switch (arg, a, b) {
+      case getSum(): return getSum();
+      case getMult(): return getMult();
+      case getDiv(): return getDiv();
+      break;
+      default: console.log('arg is not a function');
+    }
   }
 }
 
 /**
+ * Return sum
  *
  * @param a
  * @param b
@@ -35,6 +40,7 @@ function getSum(a, b) {
 
 
 /**
+ * Return mult
  *
  * @param a
  * @param b
@@ -48,6 +54,7 @@ function getMult(a, b) {
 }
 
 /**
+ * Return div
  *
  * @param a
  * @param b
@@ -60,3 +67,6 @@ function getDiv(a, b) {
   return('a or b is not a number');
 }
 
+
+alert(getDiv(2, 3));
+alert(doSmth(getDiv(2, 3)));
