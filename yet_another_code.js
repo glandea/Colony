@@ -4,22 +4,22 @@
 // каждая из которых принимает 2 числа и выполняет соответственно их сложение, умножение, или деление.
 
 
+
 /**
  * Return math function
  *
  * @param arg
- * @param a {number}
- * @param b {number}
  * @return {number}
  */
 function doSmth(arg, a, b){
-  if (typeof arg === 'string' || typeof(a) === 'number' || typeof(b) === 'number') {
-      switch (arg, a, b) {
-      case getSum(): return getSum();
-      case getMult(): return getMult();
-      case getDiv(): return getDiv();
-      break;
-      default: console.log('arg is not a function');
+  if (typeof arg === 'string' && typeof(a) === 'number' && typeof(b) === 'number') {
+      switch (arg) {
+          case 'getSum': return getSum();
+          break;
+          case 'getMult': return getMult();
+          break;
+          case 'getDiv': return getDiv();
+          default: console.log('arg is not a function');
     }
   }
 }
@@ -27,8 +27,8 @@ function doSmth(arg, a, b){
 /**
  * Return sum
  *
- * @param a
- * @param b
+ * @param a {number}
+ * @param b {number}
  * @return {number}
  */
 function getSum(a, b) {
@@ -42,8 +42,8 @@ function getSum(a, b) {
 /**
  * Return mult
  *
- * @param a
- * @param b
+ * @param a {number}
+ * @param b {number}
  * @return {number}
  */
 function getMult(a, b) {
@@ -56,8 +56,9 @@ function getMult(a, b) {
 /**
  * Return div
  *
- * @param a
- * @param b
+ * @param a {number}
+ * @param b {number}
+ *  :3
  * @return {number}
  */
 function getDiv(a, b) {
@@ -68,5 +69,10 @@ function getDiv(a, b) {
 }
 
 
-alert(getDiv(2, 3));
-alert(doSmth(getDiv(2, 3)));
+
+
+
+
+
+
+
