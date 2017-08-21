@@ -8,18 +8,23 @@
 /**
  * Return math function
  *
- * @param arg
+ * @param {Number} a
+ * @param {Number} b
+ * @param {string} arg - name of the wanted fucn
  * @return {number}
  */
 function doSmth(arg, a, b){
   if (typeof arg === 'string' && typeof(a) === 'number' && typeof(b) === 'number') {
       switch (arg) {
-          case 'getSum': return getSum();
-          break;
-          case 'getMult': return getMult();
-          break;
-          case 'getDiv': return getDiv();
-          default: console.log('arg is not a function');
+          case 'getSum':
+              return getSum(a, b);
+          case 'getMult':
+              return getMult(a, b);
+          case 'getDiv':
+              return getDiv(a, b);
+          default:
+              console.log('arg is not a function');
+              break;
     }
   }
 }
@@ -58,7 +63,6 @@ function getMult(a, b) {
  *
  * @param a {number}
  * @param b {number}
- *  :3
  * @return {number}
  */
 function getDiv(a, b) {
@@ -67,10 +71,6 @@ function getDiv(a, b) {
   }
   return('a or b is not a number');
 }
-
-
-
-
 
 
 
