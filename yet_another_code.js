@@ -8,8 +8,8 @@
 /**
  * Return math function
  *
- * @param {Number} a
- * @param {Number} b
+ * @param {number} a
+ * @param {number} b
  * @param {string} arg - name of the wanted fucn
  * @return {number}
  */
@@ -71,8 +71,3 @@ function getDiv(a, b) {
   }
   return('a or b is not a number');
 }
-
-
-
-
-
